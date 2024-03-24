@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section>
+  <article>
+    <h1 style="text-align: center;">Login</h1>
+    <!--Begin row-->
+    <div class="row" style="justify-content: center;">
+      <!--Begin col-->
+      <div class="column">
+        <form action="" method="post" id="login">
+          {% csrf_token %}
+          {{form.as_p}}
+          <input type="submit" id="button" style="margin: 0 auto;">
+        </form>
+      </div>
+      <!--End col-->
+    </div>
+    <!--End row-->
+  </article>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+
+</script>
+{% endblock %}

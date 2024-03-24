@@ -16,8 +16,9 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=255)),
-                ('noOfGuests', models.SmallIntegerField()),
-                ('bookingDate', models.DateTimeField()),
+                ('guest_number', models.SmallIntegerField()),
+                ('date_of_reservation', models.DateTimeField()),
+                ('comment', models.TextField(blank=True, null=True)),
             ],
         ),
         migrations.CreateModel(

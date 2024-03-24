@@ -14,7 +14,6 @@ class UserViewSet(viewsets.ViewSet):
 
 # Create your views here.
 class MenuView(generics.ListCreateAPIView):
-    permission_classes = [IsAuthenticated]
     queryset = Menu.objects.all()
     serializer_class = MenuSerializer
 
@@ -29,3 +28,10 @@ class BookingViewSet(viewsets.ModelViewSet):
     queryset = Booking.objects.all()
     serializer_class = BookingSerializer
     permission_classes = [IsAuthenticated]
+    pagination_class = None
+
+    def get_queryset(self):
+        if self.request.user.is_superuser:
+            return Booking.objects.all()
+        elif self.request.user.groups.count() == 0:
+            return Booking.objects.all().filter(user=self.request.user)

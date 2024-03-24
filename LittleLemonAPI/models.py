@@ -3,11 +3,12 @@ from django.db import models
 # Create your models here.
 class Booking(models.Model):
     name = models.CharField(max_length=255)
-    noOfGuests = models.SmallIntegerField()
-    bookingDate = models.DateTimeField()
+    guest_number = models.SmallIntegerField()
+    date_of_reservation = models.DateTimeField()
+    comment = models. TextField(blank=True, null=True)
 
     def __str__(self):
-        return f"{self.Name}  - {self.BookingDate}"
+        return f"{self.name}  - {self.date_of_reservation}"
 
 
 class Menu(models.Model):

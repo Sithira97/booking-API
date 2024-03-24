@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'django_filters',
     'djoser',
-    'LittleLemonAPI',
+    'littlelemonAPI',
     'restaurant',
 ]
 
