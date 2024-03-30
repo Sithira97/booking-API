@@ -8,8 +8,3 @@ class BookingForm(ModelForm):
     class Meta:
         model = Booking
         fields = "__all__"
-
-class LoginForm(ModelForm):
-    class Meta:
-        model = User
-        fields = ['username', 'password']

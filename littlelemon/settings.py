@@ -157,3 +157,6 @@ REST_FRAMEWORK = {
 }
 
 DJOSER = {"USER_ID_FIELD": "username"}
+
+LOGIN_URL = '/restaurant/login/'
+LOGIN_REDIRECT_URL = '/restaurant'
