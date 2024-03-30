@@ -1,6 +1,5 @@
 from django.test import TestCase
-from  django.contrib.auth.models import User
-from .models import Menu
+from restaurant.models import Menu
 
 # Create your tests here.
 class MenuTest(TestCase) :

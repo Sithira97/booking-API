@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'django_filters',
     'djoser',
-    'littlelemonAPI',
     'restaurant',
 ]
 
@@ -122,7 +121,7 @@ TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)
@@ -158,5 +157,5 @@ REST_FRAMEWORK = {
 
 DJOSER = {"USER_ID_FIELD": "username"}
 
-LOGIN_URL = '/restaurant/login/'
-LOGIN_REDIRECT_URL = '/restaurant'
+LOGIN_URL = '/login/'
+LOGIN_REDIRECT_URL = '/'

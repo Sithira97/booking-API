@@ -1,7 +1,6 @@
 # booking-API
 1. Does the web application use Django to serve static HTML content?
     - http://127.0.0.1:8000/
-    - http://127.0.0.1:8000/restaurant/
 
 2. Has the learner committed the project to a Git repository?
     - https://github.com/Sithira97/booking-APP.git

@@ -9,6 +9,7 @@
     <li><a href="{% url 'menu' %}">Menu</a></li>
     <li><a href="{% url 'book' %}">Book</a></li>
     {% if user.is_authenticated %}
+    <li><a href="{% url 'bookings' %}">Reservations</a></li>
     <li>
       <form method="post" action="{% url 'logoutBrowser' %}">
         {% csrf_token %}
