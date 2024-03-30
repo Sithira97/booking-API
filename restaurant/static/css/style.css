@@ -135,8 +135,9 @@ textarea {
 }
 
 #login input,
-#login label {
-    width: 60%;
+#login label,
+#login button {
+    width: 60% !important;
     margin: 0 auto;
 }
 

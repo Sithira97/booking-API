@@ -18,7 +18,7 @@ class Migration(migrations.Migration):
                  primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=255)),
                 ('guest_number', models.SmallIntegerField()),
-                ('date_of_reservation', models.DateTimeField()),
+                ('date_of_reservation', models.DateField()),
                 ('comment', models.TextField(blank=True, null=True)),
             ],
         ),

@@ -9,7 +9,7 @@
     -  Yes, it uses mySQL database named "littlelemon".
 
 4. Are the menu and table booking APIs implemented?
-   - http://127.0.0.1:8000/api/bookings/
+   - http://127.0.0.1:8000/api/booking/tables/
    - http://127.0.0.1:8000/api/menu-items/
 
 5. Is the application set up with user registration and authentication?

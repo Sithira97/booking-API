@@ -39,7 +39,7 @@ def book(request):
 def bookings(request):
     if not request.user.is_authenticated:
         return redirect_to_login(resolve_url('/bookings'))
-    query = get_list_or_404(Booking, name=request.user.username)
+    query = Booking.objects.all().filter(name=request.user.username)
     serializer = BookingSerializer(query, many=True)
     return render(request, 'bookings.html', {'bookings' :serializer.data})
 
@@ -73,4 +73,4 @@ class BookingViewSet(viewsets.ModelViewSet):
         if self.request.user.is_superuser:
             return Booking.objects.all()
         elif self.request.user.groups.count() == 0:
-            return Booking.objects.all().filter(user=self.request.user)
+            return Booking.objects.all().filter(name=self.request.user.username)
